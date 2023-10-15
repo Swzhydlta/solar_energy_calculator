@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import calculatorRoutes from "./routes/calculator-routes";
 import cors from "cors";
+import serverless from "serverless-http";
 
 const application = express();
 application.use(express.json());
@@ -22,6 +23,8 @@ application.use(cors(corsOptions));
 
 application.use("/calculate", calculatorRoutes);
 
-application.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// application.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+module.exports.handler = serverless(application);
