@@ -14,9 +14,9 @@ export default function CalculateOfferPage() {
     <div>
       <div>
         {formStep === 0 ? (
-          <img id="gs-logo" src="/g-solr-logo-full.svg"></img>
+          <img id="gs-logo" src="g-solr-logo-full.svg"></img>
         ) : (
-          <img id="gs-logo" src="/h-solutions-splendid.svg"></img>
+          <img id="gs-logo" src="h-solutions-splendid.svg"></img>
         )}
       </div>
       {formStep === 0 && (
