@@ -1,0 +1,105 @@
+.gs-form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .gs-form-message {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    color: #f0f0f0;
+  }
+  #gs-form-input {
+    text-align: center;
+    margin-top: 15px;
+    border: 2px solid yellow;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    width: 50%;
+    max-width: 500px;
+    transition: border 0.3s;
+
+    &:focus {
+      border: 2px solid #f0f0f0;
+      outline: none;
+    }
+  }
+
+  .gs-form-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.gs-metrics-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  .gs-metrics-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 5px 10px;
+    margin-top: 5px;
+    color: black;
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+    .gs-metric-name-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .gs-metric-name {
+        margin-left: 10px;
+      }
+
+      .gs-sun-icon {
+        height: 10px;
+        width: 10px;
+        background-color: yellow;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.gs-form-button {
+  margin-top: 30px;
+  padding: 10px 0;
+  width: 50%;
+  background-color: yellow;
+  border: 2px solid yellow;
+  color: black;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: black;
+    border: 2px solid yellow;
+    color: yellow;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Add your styles here */
+  .gs-metrics-wrapper {
+    width: 800px;
+  }
+
+  .gs-form-button {
+    width: 20%;
+  }
+
+  .gs-form-description {
+    width: 60%;
+  }
+}
