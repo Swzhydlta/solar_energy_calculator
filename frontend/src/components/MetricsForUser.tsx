@@ -13,7 +13,7 @@ export default function MetricsForUser({ metrics, setFormStep }: Props) {
 
       <div className="gs-metrics-wrapper">
         {metrics.map((item) => (
-          <div className="gs-metrics-row">
+          <div className="gs-metrics-row" key={item.name}>
             <div className="gs-metric-name-wrapper">
               <div className="gs-sun-icon"></div>
               <div className="gs-metric-name">{item.name}</div>

@@ -5,6 +5,7 @@ provider:
   stage: dev
   region: us-east-1
   memorySize: 128
+  timeout: 15
 functions:
   app:
     handler: backend/server.handler
@@ -12,16 +13,8 @@ functions:
       - http:
           path: /
           method: ANY
-          cors:
-            origin: "https://swzhydlta.github.io"
-            headers:
-              - Content-Type
-            allowCredentials: true
+          cors: true
       - http:
           path: /{proxy+}
           method: ANY
-          cors:
-            origin: "https://swzhydlta.github.io"
-            headers:
-              - Content-Type
-            allowCredentials: true
+          cors: true
